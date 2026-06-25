@@ -33,8 +33,19 @@
     padding: 15px 30px;
 }
 
-.search{
-    height: 40px;
+.filter-btn{
+    margin-left: 3rem;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-btn > button{
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
 }
 
 .res-container{
@@ -70,4 +81,40 @@
 .res-content-container{
     line-height: 24px;
     padding: 10px;
+}
+
+.login-btn{
+    padding: 0px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+/* ========================= Shimmer-card ========================== */
+.shimmer-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.shimmer-card{
+    height: 290px;
+    width: 300px;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+}
+
+.res-container Link{
+    text-decoration: none;
+}
+
+/* ========================== About Page ================================ */
+.user-card{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid black;
 }
