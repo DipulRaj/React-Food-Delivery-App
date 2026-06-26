@@ -1,16 +1,16 @@
 const RestaurantCard = (props) => {
   const { resData } = props;
   return (
-    <div className="res-card">
-      <div className="res-image-container">
-        <img
+    <div className="m-4 p-1 w-[300] bg-gray-100 h-[350] rounded-sm">
+      <div className="h-[60%] rounded-sm" >
+        <img className="h-[99%] w-[99%] rounded-sm"
           alt="res-image"
           src={"https://media-assets.swiggy.com/swiggy/image/upload/" + resData.cloudinaryImageId}
         />
       </div>
 
-      <div className="res-content-container">
-        <h3>{resData.name}</h3>
+      <div className="px-3 py-2">
+        <h3 className="py-1 font-bold text-[16px]" >{resData.name}</h3>
 
         <div>
           <h3>

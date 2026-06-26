@@ -44,15 +44,15 @@ const Body = () => {
   ) : (
     <div className="body">
       <div className="filter-btn">
-        <div className="search">
-          <input
+        <div className="m-4 p-4">
+          <input className="border border-solid border-black px-1 py-1"
             type="text"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
-          <button
+          <button className="ml-2 px-4 py-1.5 bg-green-100 cursor-pointer rounded-sm"
             onClick={() => {
               const filteredRes = listOfRestaurant.filter((res) => {
                 return res.name
@@ -64,11 +64,13 @@ const Body = () => {
           >
             Search
           </button>
+
+          <button onClick={getTopRes} className="ml-5 px-4 py-1.5 bg-gray-100 cursor-pointer rounded-sm">Get Top Restaurant</button>
+
         </div>
-        <button onClick={getTopRes}>Get Top Restaurant</button>
       </div>
 
-      <div className="res-container">
+      <div className="flex flex-wrap justify-evenly">
         {filteredRestaurant.map((list) => (
           <Link key={list?.id} to={"/restaurants/" + list?.id}><RestaurantCard resData={list} /></Link>
         ))}
