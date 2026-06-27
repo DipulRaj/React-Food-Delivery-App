@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withPromotedLevel} from "./RestaurantCard";
 import Shimmer from "./shimmer";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -7,7 +7,10 @@ const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
+
   const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardPromoted = withPromotedLevel(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -19,14 +22,10 @@ const Body = () => {
     );
     const json = await data.json();
 
-    console.log(json);
-
     const ApiData =
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map(
         (el) => el?.info,
       );
-
-    console.log(ApiData);
 
     setListOfRestaurant(ApiData || []);
     setFilteredRestaurant(ApiData || []);
@@ -72,7 +71,9 @@ const Body = () => {
 
       <div className="flex flex-wrap justify-evenly">
         {filteredRestaurant.map((list) => (
-          <Link key={list?.id} to={"/restaurants/" + list?.id}><RestaurantCard resData={list} /></Link>
+          <Link key={list?.id} to={"/restaurants/" + list?.id}>
+            {list?.promoted?<RestaurantCardPromoted resData={list}/>:<RestaurantCard resData={list} /> }
+          </Link>
         ))}
       </div>
     </div>
