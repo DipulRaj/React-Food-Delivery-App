@@ -1,7 +1,8 @@
 import RestaurantCard, {withPromotedLevel} from "./RestaurantCard";
 import Shimmer from "./shimmer";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext} from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
@@ -38,6 +39,8 @@ const Body = () => {
     setFilteredRestaurant(filteredList);
   };
 
+  const {loggedInUser, setUserName} = useContext(UserContext);
+
   return listOfRestaurant.length === 0 ? (
     <Shimmer />
   ) : (
@@ -65,6 +68,9 @@ const Body = () => {
           </button>
 
           <button onClick={getTopRes} className="ml-5 px-4 py-1.5 bg-gray-100 cursor-pointer rounded-sm">Get Top Restaurant</button>
+
+          <label className="ml-5">User Name: </label>
+          <input className="border border-black px-1 py-1 ml-2" value={loggedInUser} onChange={(e)=>setUserName(e.target.value)} />
 
         </div>
       </div>
