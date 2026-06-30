@@ -3,12 +3,11 @@ import { CDN_URL2 } from "../utils/constant";
 import { addItem } from "../utils/cartSlice";
 
 const ItemList = ({ items }) => {
-
   const dispatch = useDispatch();
 
-  const handleAddItem = (item)=>{
+  const handleAddItem = (item) => {
     dispatch(addItem(item));
-  } 
+  };
 
   return (
     <div>
@@ -37,7 +36,12 @@ const ItemList = ({ items }) => {
               src={CDN_URL2 + item?.card?.info?.imageId}
               alt={item?.card?.info?.name}
             />
-            <button className="px-3 py-1 bg-white shadow-2xl relative bottom-9 left-9 rounded-sm" onClick={ () => handleAddItem(item) }>Add+</button>
+            <button
+              className="px-3 py-1 bg-white shadow-2xl relative bottom-9 left-9 rounded-sm cursor-pointer"
+              onClick={() => handleAddItem(item)}
+            >
+              Add+
+            </button>
           </div>
         </div>
       ))}
