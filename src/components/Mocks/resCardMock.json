@@ -1,0 +1,80 @@
+{
+    "id": "608590",
+    "name": "Pizza Hut",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/6/15/26c11635-0a07-4890-be0c-b65a767481b7_608590.JPG",
+    "locality": "DM Colony",
+    "areaName": "Shiv colony",
+    "costForTwo": "₹350 for two",
+    "cuisines": [
+        "Pizzas"
+    ],
+    "avgRating": 4.6,
+    "parentId": "721",
+    "avgRatingString": "4.6",
+    "totalRatingsString": "1.5K+",
+    "sla": {
+        "deliveryTime": 22,
+        "lastMileTravel": 2.7,
+        "serviceability": "SERVICEABLE",
+        "slaString": "20-25 mins",
+        "lastMileTravelString": "2.7 km",
+        "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+        "nextCloseTime": "2026-07-02 23:00:00",
+        "opened": true
+    },
+    "badges": {
+        "imageBadges": [
+            {
+                "imageId": "android/static-assets/icons/big_rx.png",
+                "description": "bolt!"
+            }
+        ]
+    },
+    "isOpen": true,
+    "type": "F",
+    "badgesV2": {
+        "entityBadges": {
+            "imageBased": {
+                "badgeObject": [
+                    {
+                        "attributes": {
+                            "description": "bolt!",
+                            "imageId": "android/static-assets/icons/big_rx.png"
+                        }
+                    }
+                ]
+            },
+            "textBased": {},
+            "textExtendedBadges": {}
+        }
+    },
+    "aggregatedDiscountInfoV3": {
+        "header": "ITEMS",
+        "subHeader": "AT ₹129"
+    },
+    "orderabilityCommunication": {
+        "title": {},
+        "subTitle": {},
+        "message": {},
+        "customIcon": {}
+    },
+    "differentiatedUi": {
+        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+        "differentiatedUiMediaDetails": {
+            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+            "lottie": {},
+            "video": {}
+        }
+    },
+    "reviewsSummary": {},
+    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+    "restaurantOfferPresentationInfo": {},
+    "externalRatings": {
+        "aggregatedRating": {
+            "rating": "--"
+        }
+    },
+    "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+}

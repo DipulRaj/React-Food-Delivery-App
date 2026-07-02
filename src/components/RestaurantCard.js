@@ -1,7 +1,5 @@
 const RestaurantCard = (props) => {
   const { resData } = props;
-
-  console.log(resData);
   return (
     <div className="m-4 p-1 w-[300] bg-gray-100 h-[350] rounded-sm">
       <div className="h-[60%] rounded-sm" >
